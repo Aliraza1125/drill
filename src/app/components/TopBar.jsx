@@ -3,10 +3,8 @@ import React, { useState, useEffect } from "react";
 import "./TopBar.css"; // Ensure to include your styles
 import "./notes-section.css";
 import ReactPlayer from "react-player";
-import dynamic from "next/dynamic";
-import "react-quill/dist/quill.snow.css"; // Import Quill styles
 
-const QuillEditor = dynamic(() => import("react-quill"), { ssr: false });
+
 
 const TopBar = ({ timed }) => {
   const [textSizeDropdown, setTextSizeDropdown] = useState(false);
@@ -28,30 +26,7 @@ const TopBar = ({ timed }) => {
   const [content, setContent] = useState("");
   const [tab, setTab] = useState(1);
 
-  const quillModules = {
-    toolbar: [
-      ["bold", "italic", "underline", "strike"],
-      [{ list: "ordered" }, { list: "bullet" }],
-      [{ align: [] }],
-      [{ color: [] }],
-    ],
-  };
-
-  const quillFormats = [
-    "header",
-    "bold",
-    "italic",
-    "underline",
-    "strike",
-    "blockquote",
-    "list",
-    "bullet",
-    "link",
-    "image",
-    "align",
-    "color",
-    "code-block",
-  ];
+  
 
   const handleEditorChange = (newContent) => {
     setContent(newContent);
@@ -371,14 +346,11 @@ const TopBar = ({ timed }) => {
               alt="Pause"
             />
           </div>
-          {!timed && (
-            <div
-              onClick={() => setMenuopen((menuopen) => !menuopen)}
-              class="notes-tools"
-            >
+        
+           <div onClick={() => setMenuopen((menuopen) => !menuopen)} className="notes-tools">
               <img src="/icons/notes-icon.svg" />
             </div>
-          )}
+         
         </div>
       </div>
       {menuopen && (
@@ -403,28 +375,23 @@ const TopBar = ({ timed }) => {
               Explanations (<span>0</span>)
             </h2>
           </div>
-          <div className={`notes-editor ${tab === 1 ? "visible" : ""}`}>
-            <div>
-              <p>
-                Use this space to jot down any thoughts for this question. Your
-                notes will be saved and visible the next time you review this
-                question.
-              </p>
-              <div className="">
-                <QuillEditor
-                  value={content}
-                  onChange={handleEditorChange}
-                  modules={quillModules}
-                  formats={quillFormats}
-                  className="custom-container"
-                  placeholder="You have no saved notes for this problem yet!"
-                />
-              </div>
-            </div>
-            {/* <div contentEditable="true">
-              You have no saved notes for this problem yet!
-            </div> */}
-          </div>
+<div className={`notes-editor ${tab === 1 ? "visible" : ""}`}>
+  <div>
+    <p>
+      Use this space to jot down any thoughts for this question. Your
+      notes will be saved and visible the next time you review this
+      question.
+    </p>
+    <div className="editor-container">
+      <textarea
+        value={content}
+        onChange={(e) => setContent(e.target.value)}
+        className="notes-textarea"
+        placeholder="You have no saved notes for this problem yet!"
+      />
+    </div>
+  </div>
+</div>
           <div
             className={`notes-editor explanations ${
               tab === 2 ? "visible" : ""
