@@ -204,7 +204,7 @@ const TopBar = ({ timed }) => {
         {timed ? (
           <div className="left">
             <div className="exit-button">
-              <img src="../icons/x-icon.svg" alt="Exit" />
+              <img src="/icons/x-icon.svg" alt="Exit" />
             </div>
             <button className="submit-button">Submit</button>
           </div>
@@ -214,27 +214,27 @@ const TopBar = ({ timed }) => {
         <div className="right">
           <div className="text-tools">
             <img
-              src="../icons/underline-icon.svg"
+              src="/icons/underline-icon.svg"
               className="tool-icon underline-button"
               alt="Underline"
             />
             <img
-              src="../icons/yellow-highlighter-icon.svg"
+              src="/icons/yellow-highlighter-icon.svg"
               className="tool-icon yellow-highlight"
               alt="Yellow Highlight"
             />
             <img
-              src="../icons/pink-highlighter-icon.svg"
+              src="/icons/pink-highlighter-icon.svg"
               className="tool-icon pink-highlight"
               alt="Pink Highlight"
             />
             <img
-              src="../icons/orange-highlighter-icon.svg"
+              src="/icons/orange-highlighter-icon.svg"
               className="tool-icon orange-highlight"
               alt="Orange Highlight"
             />
             <img
-              src="../icons/eraser-icon.svg"
+              src="/icons/eraser-icon.svg"
               className="tool-icon eraser-button"
               alt="Eraser"
             />
@@ -243,7 +243,7 @@ const TopBar = ({ timed }) => {
           <div className="display-tools">
             <div>
               <img
-                src="../icons/font-size-icon.svg"
+                src="/icons/font-size-icon.svg"
                 className="text-size-button"
                 onClick={() => {
                   setTextSizeDropdown(!textSizeDropdown);
@@ -285,7 +285,7 @@ const TopBar = ({ timed }) => {
             </div>
             <div>
               <img
-                src="../icons/line-spacing-icon.svg"
+                src="/icons/line-spacing-icon.svg"
                 className="line-space-button"
                 onClick={() => {
                   setLineSpaceDropdown(!lineSpaceDropdown);
@@ -364,7 +364,7 @@ const TopBar = ({ timed }) => {
             )}
             <img
               src={
-                paused ? "../icons/play-icon.svg" : "../icons/pause-icon.svg"
+                paused ? "/icons/play-icon.svg" : "/icons/pause-icon.svg"
               }
               className="pause-button"
               onClick={togglePause}
@@ -376,7 +376,7 @@ const TopBar = ({ timed }) => {
               onClick={() => setMenuopen((menuopen) => !menuopen)}
               class="notes-tools"
             >
-              <img src="../icons/notes-icon.svg" />
+              <img src="/icons/notes-icon.svg" />
             </div>
           )}
         </div>
@@ -387,7 +387,7 @@ const TopBar = ({ timed }) => {
             onClick={() => setMenuopen((menuopen) => !menuopen)}
             className="cross-icon"
           >
-            <img src="../icons/cross-icon.svg" />
+            <img src="/icons/cross-icon.svg" />
           </div>
           <div className="notes-navigation">
             <h2
@@ -451,7 +451,7 @@ const TopBar = ({ timed }) => {
               <button className="save-button">Save</button>
               <div className="checkbox" />
               <span>Share your notes? (Experimental)</span>
-              <img src="../icons/question-icon.svg" />
+              <img src="/icons/question-icon.svg" />
             </div>
           )}
         </div>

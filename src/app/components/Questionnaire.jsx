@@ -54,8 +54,8 @@ const Questionnaire = ({ flaggedQuestions, toggleFlag, timed }) => {
             }`}
             src={
               flaggedQuestions[1]
-                ? "../icons/filled-flag-icon.png"
-                : "../icons/flag-icon.svg"
+                ? "/icons/filled-flag-icon.png"
+                : "/icons/flag-icon.svg"
             }
             alt="flag"
             onClick={() => toggleFlag(1)}
@@ -103,7 +103,7 @@ const Questionnaire = ({ flaggedQuestions, toggleFlag, timed }) => {
               </div>
               <div style={{ marginTop: 5 }}>
                 <img
-                  src="../icons/eye-icon.svg"
+                  src="/icons/eye-icon.svg"
                   alt="eye"
                   onClick={() => toggleVisibility(index)}
                 />

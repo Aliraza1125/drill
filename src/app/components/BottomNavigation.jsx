@@ -74,7 +74,7 @@ const BottomNavigation = ({ flaggedQuestions }) => {
           className={`back-button ${currentQuestion === 1 ? "anormal" : ""}`}
           onClick={() => handleNavigation("prev")}
         >
-          <img src="../icons/left-arrow-icon.svg" alt="Previous" />
+          <img src="/icons/left-arrow-icon.svg" alt="Previous" />
         </div>
         <div
           className={`forward-button ${
@@ -82,7 +82,7 @@ const BottomNavigation = ({ flaggedQuestions }) => {
           }`}
           onClick={() => handleNavigation("next")}
         >
-          <img src="../icons/right-arrow-icon.svg" alt="Next" />
+          <img src="/icons/right-arrow-icon.svg" alt="Next" />
         </div>
       </div>
     </nav>
