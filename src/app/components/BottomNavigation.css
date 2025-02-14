@@ -1,0 +1,97 @@
+.bottom-navigation {
+  margin-top: auto;
+  width: 100%;
+  min-height: max(60px, 8vh);
+  display: grid;
+  grid-template-columns: 8fr 2fr;
+  padding: 4px 16px;
+  box-shadow: 0 6px 16px 2px #000;
+  background-color: #f8f9fa;
+  position: fixed;
+  bottom: 0;
+  z-index: 1000;
+}
+.bottom-navigation .left {
+  display: flex;
+  align-items: center;
+  padding: 1px 0px;
+}
+
+.bottom-navigation .left .separator {
+  height: 80%;
+  width: 2px;
+  background-color: #8c8f91;
+  margin: 0 max(1vh, 0.8vw);
+}
+.nav-section {
+  display: flex;
+  align-items: center;
+  gap: max(1vh, 0.8vw);
+}
+.nav-question {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: max(0.4vh, 0.2vw);
+  font-size: max(1.5vh, 1.2vw);
+  line-height: normal;
+  cursor: pointer;
+}
+.nav-question .nav-pointer {
+  height: 1.5ch;
+  width: 2px;
+  background-color: transparent;
+}
+.nav-pointer.current {
+  background-color: #212529;
+}
+.nav-question .nav-pointer.flagged {
+  background-color: transparent;
+  aspect-ratio: 1/1;
+  width: auto;
+  background-image: url("/icons/filled-flag-icon.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.nav-pointer.flagged.current {
+  background-image: url("/icons/black-flag-icon.png");
+}
+.nav-question .completion-ellipse {
+  height: 1.2ch;
+  width: 2ch;
+  border: 1px solid #000;
+  border-radius: 80px;
+}
+.completion-ellipse.completed {
+  background-color: #000;
+}
+
+.bottom-navigation .right {
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  gap: max(1vh, 0.8vw);
+}
+.back-button,
+.forward-button {
+  padding: max(0.5vh, 0.3vw) max(1.5vh, 1.2vw);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 1px solid #7c7d7d;
+}
+.back-button img,
+.forward-button img {
+  font-size: max(1.5vh, 1.2vw);
+  height: 4ch;
+  width: auto;
+}
+.back-button.anormal,
+.forward-button.anormal {
+  border: none;
+  opacity: 0.6;
+}
