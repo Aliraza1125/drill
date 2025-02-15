@@ -189,27 +189,11 @@
   height: 100%;
   display: flex;
   align-items: center;
-  cursor: pointer;
+  justify-content: center;
 }
-
-.notes-tools img {
+.notes-tools > img {
   aspect-ratio: 1/1;
   font-size: max(2.1vh, 1.8vw);
-  height: 3ch;
+  height: 2.5ch;
   width: auto;
-}
-
-.notes-tools:hover {
-  opacity: 0.8;
-}
-
-/* Fix overlay when notes section is open */
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 1999; /* Just below the annotations-section */
 }
