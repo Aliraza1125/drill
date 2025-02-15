@@ -1,5 +1,5 @@
 {
-  "name": "drill",
+  "name": "drill2",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,10 +9,17 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@tinymce/tinymce-react": "^5.1.1",
+    "@tiptap/extension-color": "^2.11.5",
+    "@tiptap/extension-history": "^2.11.5",
+    "@tiptap/extension-link": "^2.11.5",
+    "@tiptap/extension-list-item": "^2.11.5",
+    "@tiptap/extension-text-align": "^2.11.5",
+    "@tiptap/extension-underline": "^2.11.5",
+    "@tiptap/react": "^2.11.5",
+    "@tiptap/starter-kit": "^2.11.5",
     "next": "15.1.7",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-player": "^2.16.0",
     "react-quill": "^2.0.0"
   },
